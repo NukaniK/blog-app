@@ -1,0 +1,8 @@
+<div class="container">
+    <a [routerLink]="['/create']" class="btn btn-primary">Create a new post</a>
+    <div *ngFor="let post of posts" class="post">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+      <a [routerLink]="['/post', post.id]" class="btn btn-link">Read more</a>
+    </div>
+  </div>

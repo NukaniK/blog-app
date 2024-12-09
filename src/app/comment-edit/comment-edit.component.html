@@ -1,0 +1,18 @@
+<div class="container">
+    <h3>Edit Comment</h3>
+    <form (ngSubmit)="updateComment()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="updatedComment.name" name="name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="updatedComment.email" name="email" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="body">Comment</label>
+        <textarea id="body" [(ngModel)]="updatedComment.body" name="body" class="form-control" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Update Comment</button>
+    </form>
+  </div>

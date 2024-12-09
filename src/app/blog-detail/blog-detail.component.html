@@ -1,0 +1,10 @@
+<div class="container">
+    <div *ngIf="post">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+    <app-comment-list [comments]="comments" (edit)="editComment($event)"></app-comment-list>
+    <div *ngIf="editingComment">
+      <app-comment-edit [comment]="editingComment" (cancel)="cancelEdit()"></app-comment-edit>
+    </div>
+  </div>
